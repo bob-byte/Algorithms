@@ -11,8 +11,14 @@
             <MenuItem Header="Algorithms">
                 <MenuItem x:Name="MenuBubble" Header="Bubble Sort" Click="MenuBubble_Click"/>
                 <MenuItem x:Name="MenuCocktail" Header="Cocktail Sort" Click="MenuCocktail_Click"/>
+                <MenuItem x:Name="MenuInsert" Header="Insert Sort" Click="MenuInsert_Click"/>
             </MenuItem>
         </Menu>
+        <TextBox x:Name="Input" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" Margin="10,70,0,0"/>
+        <Button Click="Sort_Click" x:Name="Sort" Content="Sort" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" Margin="70,117,0,0"/>
+        <Label Content="Results" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="89,141,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Margin="10,172,0,0"/>
+        <Label Content="Input an array of data in the format1 &#xD;&#xA;                      2 5 3 10 4" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Height="43" Width="204"/>
 
     </Grid>
 </Window>
