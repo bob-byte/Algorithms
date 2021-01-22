@@ -11,15 +11,15 @@ namespace Algoritms.Tests
     [TestClass()]
     public class SortTests
     {
-        static List<Int32> list;
-        static Int32[] sorted;
+        private static List<Int32> list;
+        private static Int32[] sorted;
 
-        [DataTestMethod()]
-        public void AInitialize()
+        public SortTests()
         {
             Random rnd = new Random();
             list = new List<Int32>();
-            for (int i = 0; i < 10; i++)
+
+            for (Int32 i = 0; i < 1000; i++)
             {
                 list.Add(rnd.Next(0, 10));
             }
@@ -36,7 +36,7 @@ namespace Algoritms.Tests
 
             list.Sort();
 
-            for (int i = 0; i < sorted.Length; i++)
+            for (Int32 i = 0; i < sorted.Length; i++)
             {
                 Assert.AreEqual(sorted[i], list[i]);
             }
@@ -51,7 +51,7 @@ namespace Algoritms.Tests
 
             bubble.Sort();
 
-            for (int i = 0; i < sorted.Length; i++)
+            for (Int32 i = 0; i < sorted.Length; i++)
             {
                 Assert.AreEqual(sorted[i], bubble.Items[i]);
             }
@@ -66,7 +66,7 @@ namespace Algoritms.Tests
 
             cocktail.Sort();
 
-            for (int i = 0; i < sorted.Length; i++)
+            for (Int32 i = 0; i < sorted.Length; i++)
             {
                 Assert.AreEqual(sorted[i], cocktail.Items[i]);
             }
@@ -82,7 +82,7 @@ namespace Algoritms.Tests
 
             insert.Sort();
 
-            for (int i = 0; i < sorted.Length; i++)
+            for (Int32 i = 0; i < sorted.Length; i++)
             {
                 Assert.AreEqual(sorted[i], insert.Items[i]);
             }
@@ -97,12 +97,10 @@ namespace Algoritms.Tests
 
             shell.Sort();
 
-            for (int i = 0; i < sorted.Length; i++)
+            for (Int32 i = 0; i < sorted.Length; i++)
             {
                 Assert.AreEqual(sorted[i], shell.Items[i]);
             }
-
-           // sorted.Clear();
         }
 
         [TestMethod()]
@@ -114,12 +112,10 @@ namespace Algoritms.Tests
 
             quick.Sort();
 
-            for (int i = 0; i < sorted.Length; i++)
+            for (Int32 i = 0; i < sorted.Length; i++)
             {
                 Assert.AreEqual(sorted[i], quick.Items[i]);
             }
-
-            // sorted.Clear();
         }
     }
 }
