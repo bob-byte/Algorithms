@@ -101,8 +101,6 @@ namespace Algoritms.Tests
             {
                 Assert.AreEqual(sorted[i], shell.Items[i]);
             }
-
-           // sorted.Clear();
         }
 
         [TestMethod()]
@@ -118,8 +116,6 @@ namespace Algoritms.Tests
             {
                 Assert.AreEqual(sorted[i], quick.Items[i]);
             }
-
-            // sorted.Clear();
         }
     }
 }
