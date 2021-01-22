@@ -14,7 +14,10 @@ namespace Algoritms.Tests
         private static List<Int32> list;
         private static Int32[] sorted;
 
-        public SortTests()
+        //Using TestMethodAttribute here allows us to reduce the time from the first test method
+        [TestMethod()]
+        [TestInitialize()]
+        public void Initialize()
         {
             Random rnd = new Random();
             list = new List<Int32>();
@@ -28,7 +31,7 @@ namespace Algoritms.Tests
         }
 
         [TestMethod()]
-        public void BaseSortTest()
+        public void SortTestBase()
         {
             List<Int32> list = new List<Int32>();
 
@@ -43,7 +46,7 @@ namespace Algoritms.Tests
         }
 
         [TestMethod()]
-        public void BubbleSortTest()
+        public void SortTestBubble()
         {
             BubbleSort<Int32> bubble = new BubbleSort<Int32>();
 
@@ -58,7 +61,7 @@ namespace Algoritms.Tests
         }
 
         [TestMethod()]
-        public void CocktailSortTest()
+        public void SortTestCocktail()
         {
             CocktailSort<Int32> cocktail = new CocktailSort<Int32>();
 
@@ -74,7 +77,7 @@ namespace Algoritms.Tests
         }
 
         [TestMethod()]
-        public void InsertSortTest()
+        public void SortTestInsert()
         {
             InsertSort<Int32> insert = new InsertSort<Int32>();
 
@@ -89,7 +92,7 @@ namespace Algoritms.Tests
         }
 
         [TestMethod()]
-        public void ShellSortTest()
+        public void SortTestShell()
         {
             ShellSort<Int32> shell = new ShellSort<Int32>();
 
@@ -104,7 +107,7 @@ namespace Algoritms.Tests
         }
 
         [TestMethod()]
-        public void QuickSortTest()
+        public void SortTestQuick()
         {
             QuickSort<Int32> quick = new QuickSort<Int32>();
 
